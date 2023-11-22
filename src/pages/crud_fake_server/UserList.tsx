@@ -28,7 +28,7 @@ const UserList = () => {
     console.log("afterViewDispatch=>", afterViewDispatch);
 
     if (afterViewDispatch.payload) {
-      navigate(`/user/view/${vdata.id}`);
+      navigate(`/user/view/${vdata.id}`, { replace: true });
     } else {
       toast.error("No particular user visible or something wrong!", {
         position: toast.POSITION.TOP_RIGHT,
