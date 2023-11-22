@@ -6,3 +6,6 @@ https://jsonformatter.org/json-to-typescript
 
 // Redux-Toolkit Setup for TS
 https://redux-toolkit.js.org/tutorials/typescript
+
+// New routing docs
+https://bobbyhadz.com/blog/react-router-go-back-to-previous-page
