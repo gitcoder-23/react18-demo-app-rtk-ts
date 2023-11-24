@@ -5,7 +5,7 @@ import UserList from "./pages/crud_fake_server/UserList";
 import UserView from "./pages/crud_fake_server/UserView";
 import ToastMessage from "./components/ToastMessage";
 
-function App() {
+const App: React.FC = () => {
   return (
     <div className="container  mt-4">
       <h1>ReactJs CRUD App With Redux-ToolKit-builder Typescript</h1>{" "}
@@ -16,6 +16,6 @@ function App() {
       </Routes>
     </div>
   );
-}
+};
 
 export default App;

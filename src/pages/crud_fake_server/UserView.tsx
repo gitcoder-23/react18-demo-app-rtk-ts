@@ -3,7 +3,7 @@ import { Button, Card } from "react-bootstrap";
 import { useAppSelector } from "../../app/hooks";
 import { useNavigate } from "react-router-dom";
 
-const UserView = () => {
+const UserView: React.FC = () => {
   const navigate = useNavigate();
   const { singleUser } = useAppSelector((state) => state.user);
 

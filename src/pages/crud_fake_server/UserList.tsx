@@ -9,7 +9,7 @@ import { viewUser } from "../../app/slices/userSlice";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
-const UserList = () => {
+const UserList: React.FC = () => {
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
 
