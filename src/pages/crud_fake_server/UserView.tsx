@@ -24,7 +24,8 @@ const UserView = () => {
               Phone: {singleUser.phone}
               <br />
             </Card.Text>
-            <Button onClick={() => navigate(-1)} variant="primary">
+            {/* <Button onClick={() => navigate(-1)} variant="primary"> */}
+            <Button onClick={() => navigate("/")} variant="primary">
               Go Back
             </Button>
           </Card.Body>
