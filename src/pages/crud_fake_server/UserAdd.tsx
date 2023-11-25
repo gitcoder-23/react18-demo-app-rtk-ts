@@ -33,6 +33,7 @@ const UserAdd: React.FC = () => {
         phone: userAddState.phone,
       };
       dispatch(addNewUser(formFieldData));
+      navigate("/");
     }
   };
   return (
