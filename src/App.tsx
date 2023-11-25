@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import UserList from "./pages/crud_fake_server/UserList";
 import UserView from "./pages/crud_fake_server/UserView";
 import ToastMessage from "./components/ToastMessage";
+import UserAdd from "./pages/crud_fake_server/UserAdd";
 
 const App: React.FC = () => {
   return (
@@ -12,6 +13,7 @@ const App: React.FC = () => {
       <ToastMessage />
       <Routes>
         <Route path="/" element={<UserList />} />
+        <Route path="/user/add" element={<UserAdd />} />
         <Route path="/user/view/:vid" element={<UserView />} />
       </Routes>
     </div>

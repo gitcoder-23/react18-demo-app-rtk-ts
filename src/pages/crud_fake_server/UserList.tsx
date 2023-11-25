@@ -44,7 +44,10 @@ const UserList: React.FC = () => {
           </h2>
         </div>
         <div className="col">
-          <button className="btn btn-primary">
+          <button
+            className="btn btn-primary"
+            onClick={() => navigate("/user/add")}
+          >
             <FaPlusSquare /> Add User
           </button>
         </div>

@@ -22,9 +22,11 @@ const userSlice = createSlice({
 
   // normal reducers
   reducers: {
-    viewUser: (state, action: PayloadAction<UserDataMainModel>) => {
+    addNewUser: (state, action: PayloadAction<{} | any>) => {
       console.log("viewUser=>", action);
-
+      state.allUsers = [...state.allUsers, action.payload];
+    },
+    viewUser: (state, action: PayloadAction<UserDataMainModel>) => {
       state.singleUser = action.payload;
     },
   },
@@ -53,6 +55,6 @@ const userSlice = createSlice({
   },
 });
 
-export const { viewUser } = userSlice.actions;
+export const { addNewUser, viewUser } = userSlice.actions;
 
 export default userSlice.reducer;
