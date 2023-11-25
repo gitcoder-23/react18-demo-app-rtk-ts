@@ -3,7 +3,7 @@ import { Table } from "react-bootstrap";
 import { getAllUsers } from "../../app/actions/userAction";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import { UserDataMainModel } from "../../app/models/userModel";
-import { FaEye, FaPencilAlt } from "react-icons/fa";
+import { FaEye, FaPencilAlt, FaPlusSquare } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import { viewUser } from "../../app/slices/userSlice";
 import { useNavigate } from "react-router-dom";
@@ -36,10 +36,19 @@ const UserList: React.FC = () => {
     }
   };
   return (
-    <div>
-      <h2 className="mb-4 mt-4" style={{ color: "green" }}>
-        CRUD Using JSON Fake API
-      </h2>
+    <div className="container">
+      <div className="row mb-4 mt-4">
+        <div className="col">
+          <h2 className="" style={{ color: "green" }}>
+            CRUD Using JSON Fake API
+          </h2>
+        </div>
+        <div className="col">
+          <button className="btn btn-primary">
+            <FaPlusSquare /> Add User
+          </button>
+        </div>
+      </div>
       {allUsers.length === 0 ? (
         <h3>No user found!</h3>
       ) : (
@@ -63,15 +72,24 @@ const UserList: React.FC = () => {
                     <td>{udata.phone}</td>
                     <td>{udata.email}</td>
                     <td>
-                      <button className="" onClick={() => viewClick(udata)}>
+                      <button
+                        className="btn btn-info"
+                        onClick={() => viewClick(udata)}
+                      >
                         <FaEye />
                       </button>
                       &nbsp; &nbsp;
-                      <button className="" onClick={() => viewClick(udata)}>
+                      <button
+                        className="btn btn-warning"
+                        onClick={() => viewClick(udata)}
+                      >
                         <FaPencilAlt />
                       </button>
                       &nbsp; &nbsp;
-                      <button className="" onClick={() => viewClick(udata)}>
+                      <button
+                        className="btn btn-danger"
+                        onClick={() => viewClick(udata)}
+                      >
                         <MdDelete />
                       </button>
                     </td>
